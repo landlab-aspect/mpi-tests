@@ -2,6 +2,18 @@
 
 - goal: how to write an MPI parallel code with Python and C++ (coupling two codes where both have access to MPI)?
 
+## Setup
+
+You will need an installation with a c++ compiler, MPI, and Python with mpi4py, configured with the *same* MPI installation. One way to achieve this:
+
+```
+mamba create -n pythonmpi
+mamba activate pythonmpi
+mamba install openmpi=4.1.6=external_* mpi4py
+```
+where OpenMPI 4.1.6 is your system MPI.
+
+
 ## **EXPERIMENT1:** MPI_comm_spawn
 
 - MPI_comm_spawn() can create new processes communicating with MPI:
