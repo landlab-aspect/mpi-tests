@@ -9,3 +9,8 @@ def mpi_function(comm_handle):
 
     print(f"Python: Hello from Rank {rank} of {size}")
 
+    data = 1
+    globalsum = comm.allreduce(data, op=MPI.SUM)
+
+    print(f"Python: sum {globalsum}")
+
